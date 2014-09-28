@@ -7,7 +7,7 @@ Drop down menu like we see on website for iPhone
 
 works the same as `UITableView` with a `dataSource` and a `delegate`
 
-```
+```objc
 #pragma mark - data source protocol
 @protocol DOPDropDownMenuDataSource <NSObject>
 @required
@@ -27,7 +27,7 @@ works the same as `UITableView` with a `dataSource` and a `delegate`
 
 the menu will set it's width equal to screen width defaultly
 
-```
+```objc
 /**
  *  the width of menu will be set to screen width defaultly
  *
