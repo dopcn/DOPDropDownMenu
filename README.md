@@ -38,3 +38,5 @@ the menu will set it's width equal to screen width defaultly
  */
 - (instancetype)initWithOrigin:(CGPoint)origin andHeight:(CGFloat)height;
 ```
+
+this project is inspired by [MXPullDownMenu](https://github.com/xxxxxtongxue/MXPullDownMenu)
