@@ -13,7 +13,7 @@
 		87527ABB19D503A200D56994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87527AB919D503A200D56994 /* Main.storyboard */; };
 		87527ABD19D503A200D56994 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87527ABC19D503A200D56994 /* Images.xcassets */; };
 		87527ACC19D503A200D56994 /* DOPDropDownMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87527ACB19D503A200D56994 /* DOPDropDownMenuDemoTests.m */; };
-		87527AD719D5054700D56994 /* DOPDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 87527AD619D5054700D56994 /* DOPDropDownMenu.m */; };
+		8771796E19D85D9D00BA232E /* DOPDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8771796D19D85D9D00BA232E /* DOPDropDownMenu.m */; };
 		87BFBE1E19D5176C001DB348 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87BFBE1C19D5176C001DB348 /* Localizable.strings */; };
 		87BFBE2119D51778001DB348 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87BFBE1F19D51778001DB348 /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -41,8 +41,8 @@
 		87527AC519D503A200D56994 /* DOPDropDownMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOPDropDownMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87527ACA19D503A200D56994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87527ACB19D503A200D56994 /* DOPDropDownMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenuDemoTests.m; sourceTree = "<group>"; };
-		87527AD519D5054700D56994 /* DOPDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu.h; sourceTree = "<group>"; };
-		87527AD619D5054700D56994 /* DOPDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu.m; sourceTree = "<group>"; };
+		8771796C19D85D9D00BA232E /* DOPDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu.h; sourceTree = "<group>"; };
+		8771796D19D85D9D00BA232E /* DOPDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu.m; sourceTree = "<group>"; };
 		87BFBE1D19D5176C001DB348 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		87BFBE2019D51778001DB348 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,8 +68,6 @@
 		87527AA319D503A200D56994 = {
 			isa = PBXGroup;
 			children = (
-				87527AD519D5054700D56994 /* DOPDropDownMenu.h */,
-				87527AD619D5054700D56994 /* DOPDropDownMenu.m */,
 				87527AAE19D503A200D56994 /* DOPDropDownMenuDemo */,
 				87527AC819D503A200D56994 /* DOPDropDownMenuDemoTests */,
 				87527AAD19D503A200D56994 /* Products */,
@@ -88,6 +86,7 @@
 		87527AAE19D503A200D56994 /* DOPDropDownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8771796B19D85D9D00BA232E /* DOPDropDownMenu */,
 				87527AB319D503A200D56994 /* AppDelegate.h */,
 				87527AB419D503A200D56994 /* AppDelegate.m */,
 				87527AB619D503A200D56994 /* ViewController.h */,
@@ -125,6 +124,15 @@
 				87527ACA19D503A200D56994 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8771796B19D85D9D00BA232E /* DOPDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8771796C19D85D9D00BA232E /* DOPDropDownMenu.h */,
+				8771796D19D85D9D00BA232E /* DOPDropDownMenu.m */,
+			);
+			path = DOPDropDownMenu;
 			sourceTree = "<group>";
 		};
 		87BFBE1A19D516C4001DB348 /* zh-Hans.lproj */ = {
@@ -246,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87527AB819D503A200D56994 /* ViewController.m in Sources */,
-				87527AD719D5054700D56994 /* DOPDropDownMenu.m in Sources */,
+				8771796E19D85D9D00BA232E /* DOPDropDownMenu.m in Sources */,
 				87527AB519D503A200D56994 /* AppDelegate.m in Sources */,
 				87527AB219D503A200D56994 /* main.m in Sources */,
 			);
