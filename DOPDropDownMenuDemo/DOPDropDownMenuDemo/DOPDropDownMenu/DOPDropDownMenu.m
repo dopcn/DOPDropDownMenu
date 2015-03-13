@@ -82,7 +82,6 @@
     }
     
     CGFloat textLayerInterval = self.frame.size.width / ( _numOfMenu * 2);
-//    CGFloat separatorLineInterval = self.frame.size.width / _numOfMenu;
     CGFloat bgLayerInterval = self.frame.size.width / _numOfMenu;
     
     NSMutableArray *tempTitles = [[NSMutableArray alloc] initWithCapacity:_numOfMenu];
@@ -105,15 +104,6 @@
         CAShapeLayer *indicator = [self createIndicatorWithColor:self.indicatorColor andPosition:CGPointMake(titlePosition.x + title.bounds.size.width / 2 + 8, self.frame.size.height / 2)];
         [self.layer addSublayer:indicator];
         [tempIndicators addObject:indicator];
-        //separator
-        /*
-        if (i != _numOfMenu - 1) {
-            CGPoint separatorPosition = CGPointMake((i + 1) * separatorLineInterval, self.frame.size.height / 2);
-            CAShapeLayer *separator = [self createSeparatorLineWithColor:self.separatorColor andPosition:separatorPosition];
-            [self.layer addSublayer:separator];
-        }
-        */
-        
     }
     _titles = [tempTitles copy];
     _indicators = [tempIndicators copy];
@@ -158,12 +148,11 @@
 #pragma mark - init support
 - (CALayer *)createBgLayerWithColor:(UIColor *)color andPosition:(CGPoint)position {
     CALayer *layer = [CALayer layer];
-    
     layer.position = position;
     layer.bounds = CGRectMake(0, 0, self.frame.size.width/self.numOfMenu, self.frame.size.height-1);
+    layer.backgroundColor = color.CGColor;
 //    NSLog(@"bglayer bounds:%@",NSStringFromCGRect(layer.bounds));
 //    NSLog(@"bglayer position:%@", NSStringFromCGPoint(position));
-    layer.backgroundColor = color.CGColor;
     
     return layer;
 }
@@ -187,27 +176,6 @@
     
     layer.position = point;
     
-    return layer;
-}
-
-- (CAShapeLayer *)createSeparatorLineWithColor:(UIColor *)color andPosition:(CGPoint)point {
-    CAShapeLayer *layer = [CAShapeLayer new];
-    
-    UIBezierPath *path = [UIBezierPath new];
-    [path moveToPoint:CGPointMake(160,0)];
-    [path addLineToPoint:CGPointMake(160, 20)];
-    
-    layer.path = path.CGPath;
-    layer.lineWidth = 1.0;
-    layer.strokeColor = color.CGColor;
-    
-    CGPathRef bound = CGPathCreateCopyByStrokingPath(layer.path, nil, layer.lineWidth, kCGLineCapButt, kCGLineJoinMiter, layer.miterLimit);
-    layer.bounds = CGPathGetBoundingBox(bound);
-    CGPathRelease(bound);
-    
-    layer.position = point;
-//    NSLog(@"separator position: %@",NSStringFromCGPoint(point));
-//    NSLog(@"separator bounds: %@",NSStringFromCGRect(layer.bounds));
     return layer;
 }
 
