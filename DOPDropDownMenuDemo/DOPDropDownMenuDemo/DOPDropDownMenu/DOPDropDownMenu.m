@@ -44,6 +44,11 @@
 
 @implementation DOPDropDownMenu
 
+#pragma mark - public api
+- (void)reloadMenu {
+    [self setDataSource:self.dataSource];
+}
+
 #pragma mark - getter
 - (UIColor *)indicatorColor {
     if (!_indicatorColor) {
