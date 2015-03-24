@@ -39,7 +39,7 @@ the menu will set it's width equal to screen width defaultly
 - (instancetype)initWithOrigin:(CGPoint)origin andHeight:(CGFloat)height;
 ```
 
---DOPDropDownMenu-Enhanced
+DOPDropDownMenu-Enhanced
 
 there is a new DOPDropDownMenu-Enhanced, https://github.com/12207480/DOPDropDownMenu-Enhanced 
 
