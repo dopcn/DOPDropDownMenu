@@ -39,4 +39,10 @@ the menu will set it's width equal to screen width defaultly
 - (instancetype)initWithOrigin:(CGPoint)origin andHeight:(CGFloat)height;
 ```
 
+### DOPDropDownMenu-Enhanced
+
+there is a new DOPDropDownMenu-Enhanced, https://github.com/12207480/DOPDropDownMenu-Enhanced 
+
+on the basis of this, add double tableView , to optimize the code, improves stability ,
+
 this project is inspired by [MXPullDownMenu](https://github.com/xxxxxtongxue/MXPullDownMenu)
