@@ -26,6 +26,7 @@
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column;
 - (NSString *)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath;
 @optional
+- (NSString *)menu:(DOPDropDownMenu *)menu defaultTitleInColumn:(NSInteger)column;
 //default value is 1
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu;
 
