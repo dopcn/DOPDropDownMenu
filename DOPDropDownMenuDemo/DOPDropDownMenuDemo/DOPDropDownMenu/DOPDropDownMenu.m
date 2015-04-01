@@ -44,6 +44,11 @@
 
 @implementation DOPDropDownMenu
 
+#pragma mark - public api
+- (void)reloadMenu {
+    [self setDataSource:self.dataSource];
+}
+
 #pragma mark - getter
 - (UIColor *)indicatorColor {
     if (!_indicatorColor) {
@@ -96,7 +101,13 @@
         [tempBgLayers addObject:bgLayer];
         //title
         CGPoint titlePosition = CGPointMake( (i * 2 + 1) * textLayerInterval , self.frame.size.height / 2);
-        NSString *titleString = [_dataSource menu:self titleForRowAtIndexPath:[DOPIndexPath indexPathWithCol:i row:0]];
+        NSString *titleString;
+        if ([_dataSource respondsToSelector:@selector(menu:defaultTitleInColumn:)]) {
+            //default title
+            titleString = [_dataSource menu:self defaultTitleInColumn:i];
+        } else {
+            titleString = [_dataSource menu:self titleForRowAtIndexPath:[DOPIndexPath indexPathWithCol:i row:0]];
+        }
         CATextLayer *title = [self createTextLayerWithNSString:titleString withColor:self.textColor andPosition:titlePosition];
         [self.layer addSublayer:title];
         [tempTitles addObject:title];

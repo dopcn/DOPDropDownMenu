@@ -26,6 +26,7 @@
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column;
 - (NSString *)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath;
 @optional
+- (NSString *)menu:(DOPDropDownMenu *)menu defaultTitleInColumn:(NSInteger)column;
 //default value is 1
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu;
 
@@ -46,6 +47,7 @@
 @property (nonatomic, strong) UIColor *indicatorColor;
 @property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic, strong) UIColor *separatorColor;
+
 /**
  *  the width of menu will be set to screen width defaultly
  *
@@ -55,6 +57,19 @@
  *  @return menu
  */
 - (instancetype)initWithOrigin:(CGPoint)origin andHeight:(CGFloat)height;
+
+/**
+ *  title for the indexPath
+ *
+ *  @param indexPath
+ *
+ *  @return title of the indexPath
+ */
 - (NSString *)titleForRowAtIndexPath:(DOPIndexPath *)indexPath;
+
+/**
+ *  reload menu
+ */
+- (void)reloadMenu;
 
 @end

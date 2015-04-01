@@ -68,6 +68,20 @@
     return 3;
 }
 
+- (NSString *)menu:(DOPDropDownMenu *)menu defaultTitleInColumn:(NSInteger)column {
+    switch (column) {
+        case 0: return @"Citys";
+            break;
+        case 1: return @"Genders";
+            break;
+        case 2: return @"Ages";
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
 - (NSString *)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath {
     switch (indexPath.column) {
         case 0: return self.citys[indexPath.row];
