@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSArray *results;
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) DOPDropDownMenu *menu;
 @end
 
 @implementation ViewController
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = NSLocalizedString(@"navbar_title", @"the navigation bar title");
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"dismiss" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss:)];
     self.citys = @[NSLocalizedString(@"city1", @"city1"),
                    NSLocalizedString(@"city2", @"city2"),
                    NSLocalizedString(@"city3", @"city3")];
@@ -45,6 +47,7 @@
     menu.dataSource = self;
     menu.delegate = self;
     [self.view addSubview:menu];
+    self.menu = menu;
     
     self.tableView = ({
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
@@ -58,6 +61,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dismiss:(UIBarButtonItem *)sender {
+    [self.menu dismiss];
 }
 
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu {

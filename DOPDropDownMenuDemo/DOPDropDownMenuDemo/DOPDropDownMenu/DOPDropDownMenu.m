@@ -365,11 +365,9 @@
 
 #pragma mark - tableview delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self confiMenuWithSelectRow:indexPath.row];
     if (self.delegate || [self.delegate respondsToSelector:@selector(menu:didSelectRowAtIndexPath:)]) {
-        [self confiMenuWithSelectRow:indexPath.row];
         [self.delegate menu:self didSelectRowAtIndexPath:[DOPIndexPath indexPathWithCol:self.currentSelectedMenudIndex row:indexPath.row]];
-    } else {
-        //TODO: delegate is nil
     }
 }
 
@@ -386,7 +384,9 @@
     indicator.position = CGPointMake(title.position.x + title.frame.size.width / 2 + 8, indicator.position.y);
 }
 
-
+- (void)dismiss {
+    [self backgroundTapped:nil];
+}
 
 
 
