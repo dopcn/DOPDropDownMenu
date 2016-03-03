@@ -388,7 +388,9 @@
     [self backgroundTapped:nil];
 }
 
-
-
+- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component {
+    _currentSelectedMenudIndex = component;
+    [self confiMenuWithSelectRow: row];
+}
 
 @end
