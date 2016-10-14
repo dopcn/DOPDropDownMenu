@@ -60,4 +60,7 @@
 //programmatically dismiss
 - (void)dismiss;
 
+//programmatically select row
+- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component;
+
 @end
