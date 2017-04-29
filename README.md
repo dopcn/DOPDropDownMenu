@@ -46,3 +46,7 @@ there is a new DOPDropDownMenu-Enhanced, https://github.com/12207480/DOPDropDown
 on the basis of this, add double tableView , to optimize the code, improves stability ,
 
 this project is inspired by [MXPullDownMenu](https://github.com/xxxxxtongxue/MXPullDownMenu)
+
+### Swift Version
+
+swift version of DOPDropDownMenu : https://github.com/javalnanda/JNDropDownMenu
