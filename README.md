@@ -1,7 +1,7 @@
-DOPDropDownMenu
+DOP - DropDown Menu
 ===============
 
-Drop down menu like we see on website for iPhone..
+Drop down menu like we see it on website for an iPhone..
 
 ![image](https://github.com/dopcn/DOPDropDownMenu/blob/master/images/sample_en.gif)
 
